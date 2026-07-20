@@ -51,4 +51,8 @@ Define your rules here so the AI scans consistently. Starting defaults:
 - **Max open paper positions:** 3
 - **Max portfolio drawdown limit:** −5% (₹50,000) → stop opening new positions
   until reset
+- **Max notional per position:** 33% of account (₹3,33,000) — added in Stage ④
+  because 1%-risk sizing on tight stops was producing 40–85% single-name
+  concentration. Caps position size when the risk-based size is larger.
+- **Total open notional:** ≤ 100% of account (paper cash, no leverage).
 - **Currency:** INR
