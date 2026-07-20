@@ -1,7 +1,7 @@
 # Trade Plan: APOLLOHOSP — LONG
 
 - **Date proposed:** 2026-07-20
-- **Status:** PROPOSED   <!-- PROPOSED | APPROVED | REJECTED | FILLED | EXPIRED | CLOSED -->
+- **Status:** APPROVED   <!-- PROPOSED | APPROVED | REJECTED | FILLED | EXPIRED | CLOSED -->
 - **Timeframe:** 1H
 - **Setup type:** Volume-led breakout
 
@@ -46,6 +46,8 @@ coil upward.
 
 ## Decision (filled in by human)
 
-- Approved / Rejected by:
-- Date:
-- Notes:
+- Approved / Rejected by: **aharnisha (human) — APPROVED**
+- Date: 2026-07-20
+- Notes: Approved against Stage ⑥ WATCHLIST recommendation — direction is
+  unresolved, so higher chance of a failed break. Buy-stop armed at ₹8,965;
+  fills only on an up-break. Paper only.
