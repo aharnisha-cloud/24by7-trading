@@ -32,6 +32,18 @@ coil upward.
 - Direction is genuinely unresolved — this only works on an *up* break; a break
   the other way flips it bearish.
 
+## ⑥ Final Decision — AI recommendation
+
+- **Recommended status: WATCHLIST**
+- Signal strength: **Mixed.** Volume is genuinely strong (1.9×), but direction
+  is unresolved — price is coiling on the MA cluster and could break either way.
+  This plan only works on an *up* break.
+- Risk level: **Low in ₹ terms** (0.39%) — the 33% cap binds before a full 1%
+  of risk can be used, so the risk budget is under-utilised.
+- Reasoning: don't pre-commit a directional bias to a coil. Watch which way it
+  resolves; the up-break buy-stop can be armed if/when it starts to go.
+- **Paper-only. Requires your review — the decision and the risk are yours.**
+
 ## Decision (filled in by human)
 
 - Approved / Rejected by:
