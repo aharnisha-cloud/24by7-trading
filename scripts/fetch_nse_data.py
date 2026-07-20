@@ -22,10 +22,17 @@ from pathlib import Path
 
 try:
     import yfinance as yf
+    from curl_cffi import requests as curl_requests
 except ImportError:
     sys.exit("yfinance not installed. Run: pip install yfinance")
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
+
+# Plain session with a browser UA: yfinance's default Chrome TLS impersonation
+# gets reset by TLS-terminating egress proxies.
+SESSION = curl_requests.Session(
+    headers={"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36"}
+)
 
 
 def to_yahoo(symbol: str) -> str:
@@ -36,7 +43,7 @@ def to_yahoo(symbol: str) -> str:
 
 def fetch(symbol: str, days: int) -> None:
     ticker = to_yahoo(symbol)
-    df = yf.Ticker(ticker).history(period=f"{days}d", interval="1h")
+    df = yf.Ticker(ticker, session=SESSION).history(period=f"{days}d", interval="1h")
     if df.empty:
         print(f"  !! no data returned for {ticker} — check the symbol")
         return

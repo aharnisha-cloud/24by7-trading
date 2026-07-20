@@ -11,9 +11,11 @@
 
 | Symbol | Market | Notes |
 |--------|--------|-------|
-| SPY    | US equities ETF (S&P 500) | example — replace with your picks |
-| QQQ    | US equities ETF (Nasdaq 100) | example |
-| BTC-USD | Crypto | example |
+| RELIANCE | NSE large-cap (energy/retail/telecom) | default pick — swap for your own |
+| TCS      | NSE large-cap (IT services) | default pick |
+| HDFCBANK | NSE large-cap (private bank) | default pick |
+| INFY     | NSE large-cap (IT services) | default pick |
+| ^NSEI    | NIFTY 50 index | market context, not traded |
 
 ## Criteria (what counts as a setup)
 
