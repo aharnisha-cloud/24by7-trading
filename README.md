@@ -18,16 +18,20 @@ data/     Market data you paste in (OHLC candles, one file per symbol)
 setups/   Trade plans the AI proposes (entry, stop, target, reasoning)
 logs/     Decision log + results of every paper trade
 watchlist.md   Your markets and timeframe
+PROMPTS.md     The six stage prompts, run in order each session
 ```
 
 ## Workflow (each session)
 
+The six stage prompts live in `PROMPTS.md`. Run them in order:
+
 1. **Update data** — paste fresh, verified candles for each watchlist symbol into `data/`.
-2. **Stage 1 – Scan:** ask the AI to review the data and flag anything matching your criteria.
-3. **Stage 2 – Plan:** for flagged symbols, the AI writes a trade plan in `setups/` (entry, stop-loss, target, position size, risk:reward, reasoning).
-4. **Stage 3 – Approve:** you review each plan and mark it `APPROVED` or `REJECTED` (with a reason).
-5. **Stage 4 – Log:** approved plans get a row in `logs/decisions.md`. When the trade resolves (paper), record the outcome.
-6. **Stage 5 – Review:** periodically ask the AI to analyze `logs/` for what's working and what isn't.
+2. **① Market Scanner** — the AI reviews the data, summarizes trend/volume per asset, flags anything missing.
+3. **② Signal Detection** — possible setups only, each with confirming and invalidating evidence.
+4. **③ Trade Plan** — per asset: direction, entry, target, stop, invalidation, R:R → written to `setups/`.
+5. **④ Risk Manager** — position size and dollar risk checked against your rules; rule-breaking plans get BLOCKED.
+6. **⑤ Monitoring** — on later check-ins with updated data: what changed, what triggered or invalidated.
+7. **⑥ Final Decision** — AI recommends APPROVED / WATCHLIST / REJECTED; **you** make the actual call and log it in `logs/decisions.md`.
 
 ## Getting started
 
